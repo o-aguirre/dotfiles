@@ -1,0 +1,52 @@
+* {
+    border: none;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 11px;
+    font-weight: bold;
+}
+
+window#waybar {
+    background: transparent;
+}
+
+/* LA PÍLDORA CENTRAL */
+.modules-center {
+    background: #1e1e2e; /* Un gris muy oscuro/azulado */
+    color: #cdd6f4;
+    border-radius: 30px; /* Bordes de píldora */
+    padding: 3px 10px;
+    border: 1px solid #313244;
+}
+
+/* Espaciado entre módulos */
+#clock, #mpris, #workspaces, #pulseaudio, #network, #battery, #custom-separator {
+    padding: 0 6px;
+}
+
+/* Escritorios */
+#workspaces button {
+    color: #a6adc8; /* Color de los números inactivos */
+    background: transparent;
+    padding: 0px 10px; /* Da el ancho para formar el óvalo */
+    margin: 0 4px;     /* Separación entre cada número */
+    border-radius: 20px; /* Esto hace la forma ovalada/píldora */
+    
+    /* ESTA ES LA MAGIA DEL EFECTO */
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+#workspaces button.active {
+    color: #1e1e2e;      /* Número oscuro para contrastar */
+    background: #cba6f7; /* El fondo morado (como en tu foto) */
+    /* Si prefieres mantener el azul Nordic usa: background: #88c0d0; */
+    padding: 0px 16px;   /* Se hace un poco más ancho al activarse */
+}
+
+#workspaces button:hover {
+    background: #313244; /* Fondo sutil al pasar el ratón por encima */
+}
+
+/* Colores de los iconos (Opcional, estilo pastel) */
+#pulseaudio { color: #f9e2af; }
+#network { color: #a6e3a1; }
+#battery { color: #a6e3a1; }
+#battery.critical { color: #f38ba8; }
