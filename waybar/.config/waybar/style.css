@@ -46,7 +46,7 @@ window#waybar {
 }
 
 /* Colores de los iconos (Opcional, estilo pastel) */
-#pulseaudio { color: #f9e2af; }
+#mpris { color: #f9e2af; }
 #network { color: #a6e3a1; }
 #battery { color: #a6e3a1; }
 #battery.critical { color: #f38ba8; }
