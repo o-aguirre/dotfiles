@@ -1,0 +1,54 @@
+* {
+    /* Paleta de colores */
+    bg-col: #1e1e2e;          /* Fondo oscuro */
+    bg-col-light: #313244;    /* Fondo ligeramente más claro */
+    border-col: #88c0d0;      /* Tu azul de acento */
+    text-col: #cdd6f4;        /* Texto claro */
+    text-col-selected: #1e1e2e; /* Texto oscuro para el ítem seleccionado */
+    
+    font: "sans-serif 14";
+    background-color: transparent;
+}
+
+window {
+    width: 400px;
+    border: 2px;
+    border-color: @border-col;
+    border-radius: 12px;
+    background-color: @bg-col;
+    padding: 20px;
+    location: center;
+}
+
+mainbox {
+    background-color: @bg-col;
+    children: [ listview ];
+}
+
+listview {
+    background-color: @bg-col;
+    columns: 1;
+    lines: 4; /* Exactamente 4 líneas para tus 4 entornos */
+    spacing: 8px;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    background-color: @bg-col;
+    text-color: @text-col;
+    padding: 12px 20px;
+    border-radius: 8px;
+}
+
+element selected {
+    background-color: @border-col;
+    text-color: @text-col-selected;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
